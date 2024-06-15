@@ -1,53 +1,61 @@
 /* Header styles */
 header {
-    background-color: #333;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
     color: #fff;
-    padding: 20px 0;
+    padding: 10px 20px;
     text-align: center;
-    position: relative; /* Ensure relative positioning for children */
+    position: relative;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-header h1 {
-    font-size: 2.5rem;
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-content .logo h1 {
+    font-size: 2rem;
     margin: 0;
-    padding: 10px 0;
+    padding: 0;
 }
 
-/* Contact Information in Header */
-.contact-info {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    color: #fff;
-    font-size: 1.2rem;
+.header-content .contact-info {
+    font-size: 1rem;
+    margin-right: 20px;
 }
 
-.contact-info span {
-    margin-left: 10px;
+.header-content .contact-info p {
+    margin: 0;
+    padding: 0;
 }
 
-/* Floating header styles */
-.floating-header {
-    background-color: #333;
-    color: #fff;
-    position: sticky;
-    top: 0;
-    padding: 10px 0;
-    text-align: center;
-    z-index: 1000; /* Ensures it stays above other content */
+/* Navigation styles */
+nav {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
 }
 
-.floating-header nav {
-    margin-top: 20px; /* Separate from header */
+.nav-item {
+    padding: 10px;
+    margin: 0 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    transition: background-color 0.3s;
 }
 
-.floating-header nav a {
+.nav-item a {
     color: #fff;
     text-decoration: none;
-    margin: 0 10px;
-    font-size: 1.2rem;
+    font-size: 1rem;
+    transition: color 0.3s;
 }
 
-.floating-header nav a:hover {
-    text-decoration: underline;
+.nav-item:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.nav-item a:hover {
+    color: #ffeb3b;
 }

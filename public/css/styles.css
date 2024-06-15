@@ -8,7 +8,7 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #f0f0f0;
+    background-color: #fff0f5; /* Soft and modern background color */
     margin: 0;
     padding: 0;
 }
@@ -34,3 +34,5 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
+/* Additional styles can be added and customized as needed */
