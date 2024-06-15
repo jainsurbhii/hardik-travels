@@ -20,42 +20,105 @@ header {
     padding: 0;
 }
 
-.header-content .contact-info {
-    font-size: 1rem;
-    margin-right: 20px;
+.contact-info {
+    display: none; /* Hide contact info on mobile */
 }
 
-.header-content .contact-info p {
-    margin: 0;
-    padding: 0;
+.menu-toggle {
+    display: none; /* Hide menu button initially */
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 20px;
 }
 
-/* Navigation styles */
-nav {
-    margin-top: 10px;
+.menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px auto;
+    transition: background-color 0.3s;
+}
+
+.nav-list {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .nav-item {
+    margin: 0 10px;
     padding: 10px;
-    margin: 0 5px;
-    background-color: rgba(255, 255, 255, 0.1);
     border-radius: 5px;
-    transition: background-color 0.3s;
 }
 
 .nav-item a {
     color: #fff;
     text-decoration: none;
     font-size: 1rem;
-    transition: color 0.3s;
-}
-
-.nav-item:hover {
-    background-color: rgba(255, 255, 255, 0.3);
+    transition: color 0.3s, background-color 0.3s;
 }
 
 .nav-item a:hover {
-    color: #ffeb3b;
+    background-color: rgba(255, 255, 255, 0.1); /* Light background on hover */
+}
+
+@media screen and (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        align-items: center; /* Center items vertically */
+    }
+
+    .nav-list {
+        display: none; /* Hide menu list by default on mobile */
+        width: 100%;
+        background-color: #fff; /* Light background for menu list */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+        position: absolute;
+        top: 60px; /* Adjust based on header height */
+        left: 0;
+        z-index: 1000; /* Ensure menu is above other content */
+        border-radius: 5px; /* Rounded corners */
+        overflow: hidden; /* Hide overflow content */
+    }
+
+    .nav-list.active {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch; /* Stretch items vertically */
+        justify-content: flex-start; /* Align items to the top */
+    }
+
+    .nav-list a {
+        text-decoration: none;
+        color: #333;
+        padding: 15px;
+        display: block;
+        transition: background-color 0.3s ease;
+    }
+
+    .nav-list a:hover {
+        background-color: #f0f0f0; /* Light background on hover */
+    }
+
+    .menu-toggle {
+        display: block; /* Show menu button on mobile */
+        cursor: pointer; /* Change cursor to pointer */
+        margin-top: 10px; /* Add space above button */
+    }
+
+    .menu-toggle.active span:nth-child(1) {
+        transform: translateY(6px) rotate(45deg); /* Adjust rotation and position */
+    }
+
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0; /* Hide middle line */
+    }
+
+    .menu-toggle.active span:nth-child(3) {
+        transform: translateY(-6px) rotate(-45deg); /* Adjust rotation and position */
+    }
 }
