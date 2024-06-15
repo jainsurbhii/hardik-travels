@@ -1,0 +1,50 @@
+/* tour-packages.css */
+
+/* Tour Packages Section with Cards */
+.tour-packages {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Ensures equal spacing between cards */
+    gap: 20px; /* Adds a gap between cards */
+    margin-top: 20px;
+}
+
+.tour-package {
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    flex: 1 1 calc(33.33% - 40px); /* Adjust width and ensure proper spacing */
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+    box-sizing: border-box; /* Ensure padding and border are included in the width */
+}
+
+.tour-package:hover {
+    transform: translateY(-5px);
+}
+
+.tour-package h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.tour-package p {
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.tour-package strong {
+    color: #333;
+}
+
+.tour-package a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.tour-package a:hover {
+    text-decoration: none;
+}

@@ -1,0 +1,15 @@
+/* responsive.css */
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+    .tour-package {
+        flex: 1 1 calc(50% - 20px); /* Adjust width for tablets and smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .tour-package {
+        flex: 1 1 100%; /* Full width for mobile devices */
+        margin-bottom: 20px;
+    }
+}

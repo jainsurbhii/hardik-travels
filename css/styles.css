@@ -1,0 +1,36 @@
+/* Import other CSS files */
+@import url('header.css');
+@import url('sections.css');
+@import url('footer.css');
+@import url('responsive.css');
+
+/* Reset and base styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Section headings */
+.section {
+    margin-bottom: 40px;
+}
+
+.section h2 {
+    font-size: 2rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+    /* Add gradient background for headings */
+    background: linear-gradient(135deg, #FFD700, #FF6347);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

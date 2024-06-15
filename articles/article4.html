@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haridwar: Gateway to the Divine</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div id="header-placeholder"></div>
+    <div class="container">
+
+    <h1>Haridwar: Gateway to the Divine</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla consequat felis sed nisi mattis, vel pretium metus eleifend.</p>
+    <p>Morbi vulputate volutpat turpis sit amet sagittis. Integer varius, lorem id fermentum tincidunt, dolor ex dignissim nisi, eget congue orci leo ac ex.</p>
+    <p>Donec sed lectus at purus aliquam congue a eu ante. Aenean tristique nisl at metus interdum luctus.</p>
+</div>
+
+<footer>
+    <p>&copy; 2024 Hardik Travels. All rights reserved.</p>
+</footer>
+
+<script>
+    fetch('../header.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('header-placeholder').innerHTML = data;
+        });
+</script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+/* Popular trips section */
+.popular-trips {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.popular-trip {
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    width: 300px;
+    /* Add hover effect */
+    transition: transform 0.3s ease-in-out;
+}
+
+.popular-trip:hover {
+    transform: scale(1.05);
+}
+
+.popular-trip img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.popular-trip h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.popular-trip p {
+    color: #666;
+}
+
+/* Feature section */
+.features {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.feature {
+    text-align: center;
+    margin-bottom: 20px;
+    width: 300px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    /* Add gradient background for features */
+    background: linear-gradient(135deg, #FF6347, #00BFFF);
+    border-radius: 10px;
+    color: #fff;
+}
+
+.feature img {
+    width: 80px;
+    margin-bottom: 10px;
+}
+
+.feature h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.feature p {
+    color: #fff;
+}
+
+/* Customer reviews section */
+.customer-review {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}

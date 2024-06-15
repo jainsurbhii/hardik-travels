@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hardik Travels</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/sections.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/tour-packages.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <script src="scripts/header.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Placeholder for header -->
+        <div id="header-placeholder"></div>
+        
+        <!-- Include separate HTML files -->
+        <!-- Popular Trips Section -->
+        <div id="popular-trips-placeholder"></div>
+
+        <!-- Tour Packages Section -->
+        <div id="tour-packages-placeholder"></div>
+
+        <!-- Features, Reviews, Blogs Section -->
+        <div id="features-reviews-blogs-placeholder"></div>
+        
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Hardik Travels. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Fetch and insert header content
+        fetch('./header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            })
+            .catch(error => {
+                console.error('Error fetching header:', error);
+            });
+
+        // Fetch and insert popular trips section content
+        fetch('./popular-trips.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('popular-trips-placeholder').innerHTML = data;
+            })
+            .catch(error => {
+                console.error('Error fetching popular trips:', error);
+            });
+
+        // Fetch and insert tour packages section content
+        fetch('./tour-packages.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('tour-packages-placeholder').innerHTML = data;
+            })
+            .catch(error => {
+                console.error('Error fetching tour packages:', error);
+            });
+
+        // Fetch and insert features, reviews, blogs section content
+        fetch('./features-reviews-blogs.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('features-reviews-blogs-placeholder').innerHTML = data;
+            })
+            .catch(error => {
+                console.error('Error fetching features, reviews, blogs:', error);
+            });
+    </script>
+</body>
+</html>

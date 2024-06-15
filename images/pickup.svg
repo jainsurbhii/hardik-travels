@@ -1,0 +1,58 @@
+<svg
+    width="100"
+    height="100"
+    viewBox="0 0 100 100"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+>
+    <circle
+        cx="50"
+        cy="50"
+        r="48"
+        stroke="#000"
+        stroke-width="2"
+        fill="#FFF"
+    />
+    <path
+        d="M50 20
+           A15 15 0 1 1 35 50
+           Q50 80 65 50
+           A15 15 0 1 1 50 20"
+        stroke="#000"
+        stroke-width="2"
+        fill="#FFF"
+    />
+    <circle
+        cx="50"
+        cy="50"
+        r="5"
+        stroke="#000"
+        stroke-width="2"
+        fill="#FFF"
+    />
+    <line
+        x1="50"
+        y1="50"
+        x2="50"
+        y2="30"
+        stroke="#000"
+        stroke-width="2"
+    />
+    <line
+        x1="50"
+        y1="50"
+        x2="65"
+        y2="50"
+        stroke="#000"
+        stroke-width="2"
+    />
+    <text
+        x="50%"
+        y="90%"
+        font-size="12"
+        text-anchor="middle"
+        fill="#000"
+    >
+        On-Time Pickup
+    </text>
+</svg>
