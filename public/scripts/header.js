@@ -10,7 +10,15 @@ document.addEventListener('DOMContentLoaded', function () {
             // Toggle menu functionality
             const menuToggle = document.querySelector('.menu-toggle');
             const navList = document.querySelector('.nav-list');
+            const navItems = document.querySelectorAll('.nav-item a'); // Select all menu items
 
+            // Function to close menu
+            function closeMenu() {
+                menuToggle.classList.remove('active');
+                navList.classList.remove('active');
+            }
+
+            // Toggle menu on click
             menuToggle.addEventListener('click', function (event) {
                 event.preventDefault();
                 this.classList.toggle('active');
@@ -22,6 +30,13 @@ document.addEventListener('DOMContentLoaded', function () {
                 event.preventDefault();
                 this.classList.toggle('active');
                 navList.classList.toggle('active');
+            });
+
+            // Close menu when a menu item is clicked
+            navItems.forEach(item => {
+                item.addEventListener('click', function () {
+                    closeMenu();
+                });
             });
 
         })
