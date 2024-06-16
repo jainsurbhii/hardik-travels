@@ -24,10 +24,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 navList.classList.toggle('active');
             });
 
+        })
+        .catch(error => {
+            console.error('Error fetching header:', error);
         });
-})
-    .catch(error => {
-        console.error('Error fetching header:', error);
-    });
-})
-;
+});

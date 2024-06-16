@@ -12,6 +12,18 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.header-content .logo {
+    display: flex;
+    align-items: center;
+}
+
+.header-content .logo img.header-logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
 }
 
 .header-content .logo h1 {
@@ -20,9 +32,19 @@ header {
     padding: 0;
 }
 
-.header-content .contact-info {
-    display: block; /* Ensure contact info is visible by default */
-    margin-left: 10px; /* Add spacing between h1 and contact info */
+.contact-info {
+    display: block;
+    font-size: 1rem;
+}
+
+.contact-info a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contact-info a:hover {
+    color: #ffeb3b; /* Change color on hover */
 }
 
 .menu-toggle {
@@ -73,21 +95,10 @@ header {
         align-items: center; /* Center items vertically */
     }
 
-    .header-content .logo {
-        flex-direction: column; /* Stack items vertically */
-        align-items: center; /* Center items horizontally */
-    }
-
-    .header-content .contact-info {
-        display: block; /* Ensure contact info is visible on mobile */
-        margin-left: 0; /* Remove margin for mobile view */
-        margin-top: 5px; /* Add margin between logo and contact info */
-    }
-
-    .menu-toggle {
-        display: block; /* Show menu button on mobile */
-        cursor: pointer; /* Change cursor to pointer */
-        margin-top: 10px; /* Add space above button */
+    .contact-info {
+        order: 2; /* Place contact info after logo on mobile */
+        margin-top: 10px; /* Add some margin to separate from logo */
+        font-size: 0.9rem; /* Adjust font size for mobile */
     }
 
     .nav-list {
@@ -122,6 +133,12 @@ header {
         background-color: #f0f0f0; /* Light background on hover */
     }
 
+    .menu-toggle {
+        display: block; /* Show menu button on mobile */
+        cursor: pointer; /* Change cursor to pointer */
+        margin-top: 10px; /* Add space above button */
+    }
+
     .menu-toggle.active span:nth-child(1) {
         transform: translateY(6px) rotate(45deg); /* Adjust rotation and position */
     }
@@ -132,16 +149,5 @@ header {
 
     .menu-toggle.active span:nth-child(3) {
         transform: translateY(-6px) rotate(-45deg); /* Adjust rotation and position */
-    }
-}
-
-@media screen and (min-width: 769px) {
-    .header-content {
-        justify-content: space-between; /* Ensure logo and contact info are spaced */
-    }
-
-    .header-content .contact-info {
-        margin-left: auto; /* Move contact info to the right */
-        order: 2; /* Reorder contact info to appear after logo */
     }
 }
